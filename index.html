@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="PT-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,18 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        .cabecalho {
+            border: 1px, #5565ad;
+            height: 6rem;
+            /* box-shadow: .5rem .5rem .3rem .01rem #aaad55; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            align-content: start;
+            /*alinhamento vetical*/
+        }
+
         .container {
-            border: 1px, solid #aaad55;
-            height: 30rem;
-            box-shadow: .5rem .5rem .3rem .01rem #aaad55;
             display: flex;
         }
 
@@ -22,18 +31,117 @@
             color: white;
             font-weight: bold;
             padding: 1rem;
-            margin: 1rem;
-            width: 5rem; /*largura*/
-            height: 5rem; /*altura*/
+            margin: .1rem;
+            width: 5rem;
+            /*largura*/
+            height: 4rem;
+            /*altura*/
             border-radius: .5rem;
+        }
+
+        .logo {
+            flex-grow: 1;
+        }
+
+        .titulo {
+            flex-grow: 14;
+        }
+
+        .menu-sandwich {
+            flex-grow: 1;
+        }
+
+        .menu-lateral {
+            /* border: 1px solid; */
+            width: 15rem;
+            height: 30rem;
+            border-radius: 5rem;
+            padding-top: 1rem;
+        }
+
+
+        .parte-principal {
+            border: 3px dashed blue;
+            flex-grow: 1;
+        }
+
+        .title {
+            padding: 1rem;
+            background-color: #5565ad;
+            margin-bottom: .5rem;
+        }
+
+        .title:hover {
+            background-color: #8895cc;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            width: 15rem;
+        }
+
+        .cartao {
+            width: 15rem;
+            border: 1px solid;
+            height: 22rem;
+            margin: 1rem;
+        }
+
+        .descricao {
+            padding: 1rem;
+        }
+
+        .preco {
+            padding: 1rem;
+            font-weight: bolder;
+            text-align: right;
         }
     </style>
 </head>
+
 <body>
+    <div class="cabecalho">
+        <div class="item logo">Item 01</div>
+        <div class="item titulo">Item 02</div>
+        <div class="item menu-sandwich">Item 03</div>
+    </div>
+
     <div class="container">
-        <div class="item">Item 1</div>
-        <div class="item">Item 02</div>
-        <div class="item">Item 03</div>
+        <nav class="menu-lateral">
+            <a href="https://www.pucminas.br">
+                <div class="title">PUC Minas</div>
+            </a>
+            <a href="https://primevideo.com">
+                <div class="title">Prime Video</div>
+            </a>
+            <a href="https://google.com">
+                <div class="title">Google</div>
+            </a>
+            <a href="https://Mcdonalds.com">
+                <div class="title">Mcdonalds</div>
+            </a>
+        </nav>
+
+        <main class="parte-principal">
+            <div class="cartao">
+                <div class="imagem">
+                    <img src="sandwich.jpg" alt="">
+                </div>
+                <div class="descricao">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dicta quasi labore maxime qui quod
+                    quo
+                    dolores reiciendis delectus! Tenetur mollitia dolor minima culpa quibusdam! Sunt, autem. Nemo, optio
+                    corporis.
+                </div>
+                <div class="preco">R$ 45,99</div>
+            </div>
+        </main>
+
     </div>
 </body>
+
 </html>
